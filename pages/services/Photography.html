@@ -7,18 +7,7 @@
           </center>
      </div>
           <!-- loading images -->
-          <?php
-
-            if (is_dir('../../img/galary/photography/')) {
-
-            if ($dh = opendir('../../img/galary/photography/')) {
-                while (($file = readdir($dh)) !== false) {
-                    if (strlen($file)>2)
-                        echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/photography/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/photography/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-                }
-            }
-            }
-        ?>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/photography/maxresdefault.jpg"><img class="lazy" data-src="../../img/galary/photography/maxresdefault.jpg" alt="photography services"></a></div>
 </div>
 <script>
 
