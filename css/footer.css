@@ -1,0 +1,26 @@
+ul li{
+	list-style: none;
+
+}
+.servicesfoot li a{
+	text-decoration: none;
+	color: aliceblue;
+
+}
+ul li a:hover{
+	
+	color: #FFE29B;
+
+}
+.fblike{
+	padding: 1px 10px 0px 10px;
+	font-size: 17px;
+	font-weight: bolder;
+	background-color: #1A66FF;
+	color: azure;
+}
+.fblike:hover{
+	color: #1A66FF;
+	background-color: azure;
+}
+

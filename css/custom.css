@@ -1,0 +1,39 @@
+#mainnavigation li a{
+	color:#FFB659;
+	
+	font-size: 15px;
+}
+#mainnavigation li a:hover{
+	background-color:#660001;
+}
+#preloader{
+	position: fixed;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	
+}
+#preloader img{
+	width: 110px;
+	height: 21%;
+	position: fixed;
+	top: 39%;
+	left: 47%;
+}
+@media(max-width:500px){
+	#preloader img{
+		left: 38%;
+		width: 90px;
+		height: 18%
+	}
+}
+.pricelabel{
+    color:red;
+}
+body{margin:0;height:100%;}
+canvas{
+    position:absolute;
+    z-index:10;
+   
+}

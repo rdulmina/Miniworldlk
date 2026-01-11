@@ -1,0 +1,28 @@
+#scrollbtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #FFB659;
+  color: white;
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: : 8px;
+  border-radius: 10px;
+   -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+
+#scrollbtn:hover {
+  background-color: #555;
+}
+#scrollbtn i{
+  font-size: 37px;
+}
