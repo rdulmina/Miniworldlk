@@ -1,23 +1,13 @@
 $('#drop ul li a').click(function(){
      var cat=$(this).attr('name');
-        $.ajax({
-            type:'post',
-            url:'../../php/setcategory.php',
-            data:{cat:cat},
-            success:function(data){
-                window.location.replace("../../pages/services/main.php");
-            }
-        });
+     // Store the category in localStorage instead of PHP session
+     localStorage.setItem('selectedCategory', cat);
+     window.location.replace("../../pages/services/main.html");
 });
 
 $('.footer_services ul li a').click(function(){
      var cat=$(this).attr('name');
-        $.ajax({
-            type:'post',
-            url:'../../php/setcategory.php',
-            data:{cat:cat},
-            success:function(data){
-                window.location.replace("../../pages/services/main.php");
-            }
-        });
+     // Store the category in localStorage instead of PHP session
+     localStorage.setItem('selectedCategory', cat);
+     window.location.replace("../../pages/services/main.html");
 });

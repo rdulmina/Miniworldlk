@@ -1,4 +1,4 @@
-<?php session_start();?>
+<!DOCTYPE html>
 <html>
    <head>
     <title>Services</title>
@@ -108,13 +108,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span><a href="../../index.php" class="navbar-brand"><img src="../../img/logo_withoutletters.png" width="38%" height="40px"></a></span>
+                <span><a href="../../index.html" class="navbar-brand"><img src="../../img/logo_withoutletters.png" width="38%" height="40px"></a></span>
             </div>
 
             <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right" id="mainnavigation" style="padding-top:1%;">
-                    <li><a href="../../index.php">HOME</a></li>
-                    <li><a href="../../pages/packages/packages.php">PACKAGES</a></li>
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li><a href="../../pages/packages/packages.html">PACKAGES</a></li>
                     <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">OUR SERVICES<b class="caret"></b></a>
                         <ul class="dropdown-menu" style="background-color: rgb(0,0,0,0.7);">
@@ -150,8 +150,8 @@
 
                         </ul>
                     </li>
-                    <li><a href="../../pages/galary/galary.php">GALLERY</a></li>
-                    <li><a href="../../pages/contact/contact.php">CONTACT US</a></li>
+                    <li><a href="../../pages/galary/galary.html">GALLERY</a></li>
+                    <li><a href="../../pages/contact/contact.html">CONTACT US</a></li>
                                    
                 </ul>
             </div>
@@ -228,18 +228,17 @@
     <script src="../../js/headerdropdown.js"></script>   
 </html>
 <script>
-$('#currentservice').load("bouncycastle.php");
+$('#currentservice').load("bouncycastle.html");
 //direct navigation from the home menu function//
- var cat='<?php
- 				if(isset($_SESSION['cat']))
-            		echo $_SESSION['cat'];
- 			
-           ?>';
- if(cat!=""){
+// Read the selected category from localStorage (replacement for PHP session)
+var cat = localStorage.getItem('selectedCategory') || '';
+if(cat!=""){
     $('.sidenav .active').removeClass('active');
     $('#'+cat).addClass('active');
-    $('#currentservice').load(cat+".php");
- }           
+    $('#currentservice').load(cat+".html");
+    // Clear the stored category after using it
+    localStorage.removeItem('selectedCategory');
+}           
 //direct navigation from the home menu function ends//
  $('.navbar-nav').toggleClass('slide-in');
  $('.side-body').toggleClass('body-slide-in');
@@ -259,8 +258,18 @@ $('#currentservice').load("bouncycastle.php");
         $('.side-body').toggleClass('body-slide-in');
 	$('.sidenav .active').removeClass('active');
         $(this).addClass('active');
-	$('#currentservice').load($(this).attr('id')+".php");
+	$('#currentservice').load($(this).attr('id')+".html");
 	  	
+  });
+  
+  // Handle dropdown service clicks within the services page
+  $('#drop ul li a').click(function(){
+      var cat=$(this).attr('name');
+      $('.sidenav .active').removeClass('active');
+      $('#'+cat).addClass('active');
+      $('#currentservice').load(cat+".html");
+      // Close the dropdown after selection
+      $('.dropdown-toggle').dropdown('toggle');
   });
 	$(window).scroll(function() {
         if ($(".navbar").offset().top>30) {
