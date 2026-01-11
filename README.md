@@ -89,4 +89,4 @@ This website has been converted from PHP to static HTML for GitHub Pages hosting
 - Address: 944/33/A Pannipitiya Rd, Baththaramulla
 
 ---
-© 2021 Miniworld Entertainment. All rights reserved.
+© 2026 Miniworld Entertainment. All rights reserved.
