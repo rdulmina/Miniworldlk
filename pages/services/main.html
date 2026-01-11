@@ -25,6 +25,193 @@
     <link rel="stylesheet" href="../../css/scrolltotop.css"/>
 <!--    <link rel="stylesheet" href="../../css/footer.css"/>-->
     <style>
+        /* Prevent horizontal scroll */
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        #pagecontent {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        /* Mobile-first responsive improvements */
+        @media (max-width: 991px) {
+            /* Stack sidebar and content on tablets and below */
+            .side-menu {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            #currentservice {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            /* Adjust sidebar menu height for mobile */
+            .sidenav {
+                height: auto !important;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            /* Mobile specific adjustments */
+            .navbar-brand img {
+                width: 50px !important;
+                height: auto !important;
+            }
+            
+            /* Ensure content fits on mobile */
+            .photodiv {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            
+            /* Make sure images don't overflow */
+            .photodiv img, .lazy {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Mobile header adjustments */
+            #mainnavigation {
+                padding-top: 0 !important;
+            }
+            
+            #mainnavigation li a {
+                padding: 15px 10px !important; /* Better touch targets */
+            }
+            
+            /* Better dropdown menu on mobile */
+            .dropdown-menu {
+                position: static !important;
+                float: none !important;
+                width: 100% !important;
+                box-shadow: none;
+            }
+            
+            .dropdown-menu #drop .row {
+                margin: 0;
+            }
+            
+            .dropdown-menu [class*='col-'] {
+                width: 100% !important;
+                float: none !important;
+            }
+            
+            /* Hide unnecessary columns on mobile */
+            .hideonphone {
+                display: none !important;
+            }
+            
+            /* Better navbar collapse behavior */
+            .navbar-collapse {
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+        }
+        
+        @media (max-width: 450px) {
+            /* Small phone adjustments */
+            .container-fluid {
+                padding: 0;
+            }
+            
+            .side-menu {
+                padding: 0;
+            }
+            
+            #currentservice {
+                padding: 10px;
+            }
+            
+            /* Smaller heading on mobile */
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            /* Better spacing for mobile */
+            .photodiv {
+                height: auto !important;
+                min-height: 180px;
+                margin-top: 15px;
+            }
+            
+            .videodiv {
+                height: 200px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            /* Optimize navbar for small screens */
+            .navbar-header {
+                width: 100%;
+            }
+            
+            .navbar-toggle {
+                margin-right: 10px;
+            }
+            
+            /* Make service items stack nicely */
+            .itemdiv {
+                margin-bottom: 15px;
+                padding: 10px;
+            }
+            
+            /* Improve text readability on mobile */
+            body {
+                font-size: 14px;
+            }
+            
+            /* Better sidebar on mobile */
+            .side-menu-container {
+                max-height: 400px;
+                overflow-y: auto;
+            }
+        }
+        
+        /* Touch-friendly improvements */
+        .sidenav li a, .dropdown-menu li a {
+            padding: 12px 20px !important;
+            min-height: 44px; /* Apple's recommended touch target size */
+        }
+        
+        /* Ensure service content containers are responsive */
+        .side-body, .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Fix for loaded service content */
+        #currentservice .container {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        #currentservice .row {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        
+        #currentservice [class*='col-'] {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
 		.videodiv iframe {
         display:block;
        	height: 100%;
@@ -97,7 +284,7 @@
    </head>
 <body class="pull_top">
 <button onclick="topFunction()" id="scrollbtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
-<img src="../../img/backgrounds/services_cover.jpg" class="img-responsive" style="min-height: 120px;width: 100%;">
+<img src="../../img/backgrounds/services_cover.jpg" class="img-responsive" style="min-height: 80px; max-height: 250px; width: 100%; object-fit: cover;">
    
    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -157,12 +344,12 @@
             </div>
         </div>
     </div>
-<div id="pagecontent">
+<div id="pagecontent" class="container-fluid">
     <div class="row">
     <!-- uncomment code for absolute positioning tweek see top comment in css -->
     <!-- <div class="absolute-wrapper"> </div> -->
     <!-- Menu -->
-    <div class="side-menu col-md-3">
+    <div class="side-menu col-md-3 col-sm-12 col-xs-12">
     
     <nav class="navbar navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -186,7 +373,7 @@
 
     <!-- Main Menu -->
     <div class="side-menu-container" >
-        <ul class="nav navbar-nav sidenav" style="background-color:#232323; height:2000px;width: 284px;">
+        <ul class="nav navbar-nav sidenav" style="background-color:#232323; height:2000px;">
             <li class="active" id="bouncycastle" style="background-color:#232323;"><a href="#" style="color: #D3AA00;">Bouncy Castles</a></li>
             <li class="active" id="bubblehouse" style="background-color:#232323;"><a href="#" style="color: #D3AA00;">Bubble House</a></li>
             <li id="gasballon" name="gasballon" style="background-color:#232323;"><a href="#" style="color: #D3AA00;">Gas Balloons</a></li>
@@ -211,12 +398,11 @@
 </nav>
     
     </div>
-    <div id="currentservice">
+    <div id="currentservice" class="col-md-9 col-sm-12 col-xs-12">
 <!--        cotent will be laoded here-->
     </div>
    </div>
-
-</body>
+</div></body>
  	<!-- Scripts -->
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
