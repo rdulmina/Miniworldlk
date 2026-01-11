@@ -7,19 +7,9 @@
           </center>
      </div>
 	<div class="row">
-                    <!-- loading images -->
-          <?php
-
-            if (is_dir('../../img/galary/table_items/')) {
-
-            if ($dh = opendir('../../img/galary/table_items/')) {
-                while (($file = readdir($dh)) !== false) {
-                    if (strlen($file)>2)
-                        echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/table_items/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/table_items/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-                }
-            }
-            }
-        ?>
+        <!-- Static image gallery -->
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table_items/WhatsApp Image 2020-03-09 at 11.29.36 AM.jpeg"><img class="lazy" data-src="../../img/galary/table_items/WhatsApp Image 2020-03-09 at 11.29.36 AM.jpeg" alt="Candy jar and table items"></a></div>
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table_items/WhatsApp Image 2020-03-09 at 11.32.01 AM.jpeg"><img class="lazy" data-src="../../img/galary/table_items/WhatsApp Image 2020-03-09 at 11.32.01 AM.jpeg" alt="Candy jar and table items"></a></div>
 	</div>
 </div>
 <script>

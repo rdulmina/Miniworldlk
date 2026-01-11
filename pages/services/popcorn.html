@@ -7,18 +7,13 @@
           </center>
      </div>
 
-     <?php
+     <!-- loading images -->
+     <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/popcorn/DSC01259.jpg"><img class="lazy" data-src="../../img/galary/popcorn/DSC01259.jpg" alt="popcorn service"></a></div>
+     <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/popcorn/IMG_20171009_114502.jpg"><img class="lazy" data-src="../../img/galary/popcorn/IMG_20171009_114502.jpg" alt="popcorn service"></a></div>
+     <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/popcorn/IMG_20171115_161750.jpg"><img class="lazy" data-src="../../img/galary/popcorn/IMG_20171115_161750.jpg" alt="popcorn service"></a></div>
+     <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/popcorn/WhatsApp Image 2025-09-06 at 9.23.11 PM.jpeg"><img class="lazy" data-src="../../img/galary/popcorn/WhatsApp Image 2025-09-06 at 9.23.11 PM.jpeg" alt="popcorn service"></a></div>
+     <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/popcorn/WhatsApp Image 2025-09-06 at 9.23.12 PM(1).jpeg"><img class="lazy" data-src="../../img/galary/popcorn/WhatsApp Image 2025-09-06 at 9.23.12 PM(1).jpeg" alt="popcorn service"></a></div>
 
-if (is_dir('../../img/galary/popcorn/')) {
-
-if ($dh = opendir('../../img/galary/popcorn/')) {
-    while (($file = readdir($dh)) !== false) {
-        if (strlen($file)>2)
-            echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/popcorn/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/popcorn/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-    }
-}
-}
-?>
 </div>
 <script>
 

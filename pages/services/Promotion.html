@@ -6,19 +6,10 @@
                <span class="sr-only">Loading...</span>
           </center>
      </div>
-             <!-- Load images in the directory -->
-    <?php
-
-if (is_dir('../../img/galary/promotion/')) {
-
-if ($dh = opendir('../../img/galary/promotion/')) {
-    while (($file = readdir($dh)) !== false) {
-        if (strlen($file)>2)
-            echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/promotion/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/promotion/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-    }
-}
-}
-?>
+    <div class="row">
+        <!-- Static image gallery -->
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/promotion/Screenshot_2017-06-25-10-23-47-1.png"><img class="lazy" data-src="../../img/galary/promotion/Screenshot_2017-06-25-10-23-47-1.png" alt="Promotion girls for events"></a></div>
+    </div>
 </div>
 <script>
 

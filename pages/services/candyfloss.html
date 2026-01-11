@@ -7,18 +7,9 @@
           </center>
      </div>
      		                     <!-- loading images -->
-          <?php
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/candyfloss/DSC01259.jpg"><img class="lazy" data-src="../../img/galary/candyfloss/DSC01259.jpg" alt="candy floss service"></a></div>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/candyfloss/WhatsApp Image 2025-09-06 at 9.23.12 PM.jpeg"><img class="lazy" data-src="../../img/galary/candyfloss/WhatsApp Image 2025-09-06 at 9.23.12 PM.jpeg" alt="candy floss service"></a></div>
 
-            if (is_dir('../../img/galary/candyfloss/')) {
-
-            if ($dh = opendir('../../img/galary/candyfloss/')) {
-                while (($file = readdir($dh)) !== false) {
-                    if (strlen($file)>2)
-                        echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/candyfloss/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/candyfloss/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-                }
-            }
-            }
-        ?> 
 </div>
 <script>
 

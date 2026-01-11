@@ -6,19 +6,14 @@
                <span class="sr-only">Loading...</span>
           </center>
      </div>
-        <!-- Load images in the directory -->
-    <?php
-
-    if (is_dir('../../img/galary/table/')) {
-
-    if ($dh = opendir('../../img/galary/table/')) {
-        while (($file = readdir($dh)) !== false) {
-            if (strlen($file)>2)
-                echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/table/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/table/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-        }
-    }
-    }
-    ?>  
+    <div class="row">
+        <!-- Static image gallery -->
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table/kids_tables__chairs_1.png"><img class="lazy" data-src="../../img/galary/table/kids_tables__chairs_1.png" alt="Tiffany chairs and tables for events"></a></div>
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table/WhatsApp Image 2024-12-02 at 20.16.23.jpeg"><img class="lazy" data-src="../../img/galary/table/WhatsApp Image 2024-12-02 at 20.16.23.jpeg" alt="Tiffany chairs and tables for events"></a></div>
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table/WhatsApp Image 2024-12-02 at 20.28.49.jpeg"><img class="lazy" data-src="../../img/galary/table/WhatsApp Image 2024-12-02 at 20.28.49.jpeg" alt="Tiffany chairs and tables for events"></a></div>
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table/WhatsApp Image 2025-09-06 at 9.20.18 PM(1).jpeg"><img class="lazy" data-src="../../img/galary/table/WhatsApp Image 2025-09-06 at 9.20.18 PM(1).jpeg" alt="Tiffany chairs and tables for events"></a></div>
+        <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/table/WhatsApp Image 2025-09-06 at 9.20.18 PM.jpeg"><img class="lazy" data-src="../../img/galary/table/WhatsApp Image 2025-09-06 at 9.20.18 PM.jpeg" alt="Tiffany chairs and tables for events"></a></div>
+    </div>
     </div>
 <script>
 

@@ -23,18 +23,10 @@
      </div><br/><br/>
 	<div class="row">
                     <!-- loading images -->
-          <?php
-
-            if (is_dir('../../img/galary/games/')) {
-
-            if ($dh = opendir('../../img/galary/games/')) {
-                while (($file = readdir($dh)) !== false) {
-                    if (strlen($file)>2)
-                        echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/games/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/games/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-                }
-            }
-            }
-        ?>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/games/Capture.png"><img class="lazy" data-src="../../img/galary/games/Capture.png" alt="carnival games service"></a></div>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/games/DSfdC00941.jpg"><img class="lazy" data-src="../../img/galary/games/DSfdC00941.jpg" alt="carnival games service"></a></div>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/games/IMG_20180121_103152.jpg"><img class="lazy" data-src="../../img/galary/games/IMG_20180121_103152.jpg" alt="carnival games service"></a></div>
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/games/IMG_20180121_103236.jpg"><img class="lazy" data-src="../../img/galary/games/IMG_20180121_103236.jpg" alt="carnival games service"></a></div>
 	</div>
 </div>
 <script>

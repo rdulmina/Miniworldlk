@@ -7,18 +7,7 @@
           </center>
      </div>
           <!-- loading images -->
-          <?php
-
-            if (is_dir('../../img/galary/magic/')) {
-
-            if ($dh = opendir('../../img/galary/magic/')) {
-                while (($file = readdir($dh)) !== false) {
-                    if (strlen($file)>2)
-                        echo "<div class=\"col-md-4 col-sm-6 photodiv\"><a data-fancybox=\"gallery\" href=\"../../img/galary/magic/".$file."\"><img class=\"lazy\" data-src=\"../../img/galary/magic/".$file."\"  alt=\"party decoration balloon arch\"></a></div>";
-                }
-            }
-            }
-        ?>	
+          <div class="col-md-4 col-sm-6 photodiv"><a data-fancybox="gallery" href="../../img/galary/magic/DSC01238 - Copy.jpg"><img class="lazy" data-src="../../img/galary/magic/DSC01238 - Copy.jpg" alt="magic show service"></a></div>
 </div>
 <script>
 
